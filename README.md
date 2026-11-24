@@ -106,7 +106,8 @@ Only `tunnel-client` needs to stay running. You do not need to open Chrome in
 advance; Chrome DevTools MCP launches the dedicated Chrome automatically when
 a browser tool is first used.
 
-For the complete walkthrough, see [macOS setup](docs/setup-macos.md).
+For the complete walkthrough, see [macOS setup](docs/setup-macos.md). If
+something goes wrong, use the [troubleshooting guide](docs/troubleshooting.md).
 
 ## Security model
 

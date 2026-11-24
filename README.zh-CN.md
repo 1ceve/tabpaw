@@ -153,7 +153,7 @@ bash scripts/start.sh
 第一次调用浏览器工具时，Chrome DevTools MCP 会自动把专用 Chrome 拉起来。
 
 更完整的步骤见 [macOS 配置说明](docs/setup-macos.md)，故障处理见
-[排错手册](docs/troubleshooting.md)。准备修改项目本身时，请看
+[中文排错手册](docs/troubleshooting.zh-CN.md)。准备修改项目本身时，请看
 [贡献指南](CONTRIBUTING.md)。
 
 ## 安全提醒
