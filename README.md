@@ -64,7 +64,9 @@ Availability depends on your OpenAI plan, workspace permissions, and rollout.
    cd tabpaw
    ```
 
-3. Create a tunnel and a restricted runtime API key in OpenAI Platform.
+3. Create a tunnel and a restricted runtime API key in OpenAI Platform. Follow
+   [Create the Runtime API key](docs/create-runtime-api-key.md) and grant only
+   **Tunnels Read + Use** for normal use.
 
 4. Copy the example profile:
 
