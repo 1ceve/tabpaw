@@ -1,5 +1,7 @@
 # Troubleshooting
 
+[简体中文](troubleshooting.zh-CN.md)
+
 Run this first:
 
 ```bash
