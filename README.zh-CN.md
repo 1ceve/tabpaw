@@ -67,9 +67,9 @@ cd tabpaw
 
 ### 3. 创建 tunnel 与 Runtime API key
 
-在 OpenAI Platform 中创建 tunnel，并创建权限尽可能小的 Runtime API key。
-日常运行只需要 **Tunnels Read + Use**。按照
-[创建 Runtime API key](docs/create-runtime-api-key.zh-CN.md) 一步一步操作；
+按照 [创建 Secure MCP Tunnel](docs/create-tunnel.zh-CN.md) 完成 tunnel 创建与
+工作区关联，再按照 [创建 Runtime API key](docs/create-runtime-api-key.zh-CN.md)
+创建权限尽可能小的 key。日常运行只需要 **Tunnels Read + Use**；
 长期运行的客户端使用 Runtime key，不要使用 Admin key。
 
 ### 4. 复制示例配置

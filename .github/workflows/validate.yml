@@ -20,5 +20,8 @@ jobs:
       - name: Scan for obvious secrets
         run: bash scripts/check-secrets.sh
 
+      - name: Verify secret scan redaction
+        run: bash scripts/test-secret-scan-redaction.sh
+
       - name: Confirm example placeholders
         run: grep -q 'tunnel_REPLACE_WITH_YOUR_ID' config/tabpaw.example.yaml

@@ -40,7 +40,8 @@ You need:
    will use the plugin.
 
 Use a runtime key for the long-running client. Do not use an Admin API key.
-For the exact permission and terminal steps, follow
+For the exact Platform and permission steps, follow
+[Create the Secure MCP Tunnel](create-tunnel.md), then
 [Create the Runtime API key](create-runtime-api-key.md).
 
 ## 3. Create a local profile

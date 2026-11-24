@@ -65,8 +65,9 @@ Availability depends on your OpenAI plan, workspace permissions, and rollout.
    ```
 
 3. Create a tunnel and a restricted runtime API key in OpenAI Platform. Follow
-   [Create the Runtime API key](docs/create-runtime-api-key.md) and grant only
-   **Tunnels Read + Use** for normal use.
+   [Create the Secure MCP Tunnel](docs/create-tunnel.md), then
+   [Create the Runtime API key](docs/create-runtime-api-key.md). Grant only
+   **Tunnels Read + Use** to the runtime key for normal use.
 
 4. Copy the example profile:
 

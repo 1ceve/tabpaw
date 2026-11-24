@@ -15,6 +15,7 @@ are welcome.
    ```bash
    bash -n scripts/*.sh
    bash scripts/check-secrets.sh
+   bash scripts/test-secret-scan-redaction.sh
    ```
 
 6. Explain what you tested and on which operating system.
