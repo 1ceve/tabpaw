@@ -1,0 +1,19 @@
+config_version: 1
+control_plane:
+  base_url: "https://api.openai.com"
+  tunnel_id: "tunnel_REPLACE_WITH_YOUR_ID"
+  api_key: "env:CONTROL_PLANE_API_KEY"
+health:
+  # Keep a fixed port for a stable local admin URL.
+  # Use "127.0.0.1:0" plus url_file for concurrent or clean-room runs.
+  listen_addr: "127.0.0.1:8080"
+  # url_file: "/tmp/tabpaw-health.url"
+admin_ui:
+  open_browser: false
+log:
+  level: info
+  format: json
+mcp:
+  commands:
+    - channel: main
+      command: "npx -y chrome-devtools-mcp@latest"

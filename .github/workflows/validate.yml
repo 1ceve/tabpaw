@@ -1,0 +1,24 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate shell syntax
+        run: bash -n scripts/*.sh
+
+      - name: Scan for obvious secrets
+        run: bash scripts/check-secrets.sh
+
+      - name: Confirm example placeholders
+        run: grep -q 'tunnel_REPLACE_WITH_YOUR_ID' config/tabpaw.example.yaml
