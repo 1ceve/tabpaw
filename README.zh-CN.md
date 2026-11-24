@@ -11,6 +11,8 @@ Chrome 实际运行在自己的 Mac 上，窗口可以看见，专用浏览器�
 当同一个私有插件同时在 Chat 与 Work 中启用时，两边都能调用这只浏览器，并继续使用各自
 已有的对话上下文与可用记忆。
 
+它尤其适合浏览或操作 X、小红书等依赖真实登录状态的网站。
+
 TabPaw 没有复制或重新打包上游项目。它提供的是脱敏示例、辅助脚本和从零配置教程，依赖：
 
 - [`openai/tunnel-client`](https://github.com/openai/tunnel-client)
