@@ -55,12 +55,22 @@ brew install openai/tools/tunnel-client
 tunnel-client --version
 ```
 
-### 2. 创建 tunnel 与 Runtime API key
+### 2. 下载 TabPaw 并进入目录
+
+```bash
+git clone https://github.com/1ceve/tabpaw.git
+cd tabpaw
+```
+
+后面的 `scripts/...` 与 `config/...` 都是这个仓库里的相对路径，所以要在
+`tabpaw` 目录中运行。
+
+### 3. 创建 tunnel 与 Runtime API key
 
 在 OpenAI Platform 中创建 tunnel，并创建权限尽可能小的 Runtime API key。
 长期运行的客户端使用 Runtime key，不要使用 Admin key。
 
-### 3. 复制示例配置
+### 4. 复制示例配置
 
 ```bash
 mkdir -p "$HOME/.config/tunnel-client"
@@ -71,7 +81,7 @@ chmod 600 "$HOME/.config/tunnel-client/tabpaw.yaml"
 打开复制后的文件，把 `tunnel_REPLACE_WITH_YOUR_ID` 换成自己的 tunnel ID。
 真实配置继续留在仓库之外。
 
-### 4. 在当前终端输入 Runtime API key
+### 5. 在当前终端输入 Runtime API key
 
 ```bash
 read -s CONTROL_PLANE_API_KEY
@@ -81,17 +91,24 @@ echo
 
 输入时屏幕不会显示字符。密钥只进入当前 shell，不会写进仓库。
 
-### 5. 检查并启动
+### 6. 检查并启动
 
 ```bash
 bash scripts/doctor.sh
 bash scripts/start.sh
 ```
 
-`start.sh` 会在 macOS 上使用 `caffeinate -i`，允许屏幕熄灭，同时避免电脑因空闲进入整机睡眠。
-MacBook 合盖通常仍会睡眠。
+这两个脚本只是方便使用的快捷包装，并非额外的软件。`bash scripts/start.sh`
+在 macOS 上相当于：
 
-### 6. 在 ChatGPT 中添加私有插件
+```bash
+caffeinate -i tunnel-client run --profile tabpaw
+```
+
+其中 `caffeinate -i` 允许屏幕熄灭，同时避免电脑因空闲进入整机睡眠。
+MacBook 合盖通常仍会睡眠。也可以跳过脚本，直接运行上面的完整命令。
+
+### 7. 在 ChatGPT 中添加私有插件
 
 进入 ChatGPT 的 Plugins 设置，添加自定义 MCP server：
 

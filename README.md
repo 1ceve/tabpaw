@@ -57,9 +57,16 @@ Availability depends on your OpenAI plan, workspace permissions, and rollout.
    brew install openai/tools/tunnel-client
    ```
 
-2. Create a tunnel and a restricted runtime API key in OpenAI Platform.
+2. Download this repository and enter its directory:
 
-3. Copy the example profile:
+   ```bash
+   git clone https://github.com/1ceve/tabpaw.git
+   cd tabpaw
+   ```
+
+3. Create a tunnel and a restricted runtime API key in OpenAI Platform.
+
+4. Copy the example profile:
 
    ```bash
    mkdir -p "$HOME/.config/tunnel-client"
@@ -67,10 +74,10 @@ Availability depends on your OpenAI plan, workspace permissions, and rollout.
    chmod 600 "$HOME/.config/tunnel-client/tabpaw.yaml"
    ```
 
-4. Replace `tunnel_REPLACE_WITH_YOUR_ID` in the copied profile. Keep the real
+5. Replace `tunnel_REPLACE_WITH_YOUR_ID` in the copied profile. Keep the real
    profile outside this repository.
 
-5. Put the runtime API key into your current shell without saving it to Git:
+6. Put the runtime API key into your current shell without saving it to Git:
 
    ```bash
    read -s CONTROL_PLANE_API_KEY
@@ -78,14 +85,17 @@ Availability depends on your OpenAI plan, workspace permissions, and rollout.
    echo
    ```
 
-6. Diagnose and start:
+7. Diagnose and start from inside the `tabpaw` directory:
 
    ```bash
    bash scripts/doctor.sh
    bash scripts/start.sh
    ```
 
-7. In ChatGPT, add a private custom MCP plugin using **Tunnel** as the
+   The scripts are optional convenience wrappers. On macOS, the direct start
+   command is `caffeinate -i tunnel-client run --profile tabpaw`.
+
+8. In ChatGPT, add a private custom MCP plugin using **Tunnel** as the
    connection and select the same tunnel. Keep the tunnel running while the
    plugin is discovered and used.
 

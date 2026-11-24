@@ -43,7 +43,14 @@ Use a runtime key for the long-running client. Do not use an Admin API key.
 
 ## 3. Create a local profile
 
-From a clone of this repository:
+Clone this repository and enter its directory:
+
+```bash
+git clone https://github.com/1ceve/tabpaw.git
+cd tabpaw
+```
+
+Then copy the example profile:
 
 ```bash
 mkdir -p "$HOME/.config/tunnel-client"
@@ -92,9 +99,15 @@ Resolve every doctor error before creating the ChatGPT plugin.
 bash scripts/start.sh tabpaw
 ```
 
-On macOS the helper uses `caffeinate -i`, which prevents idle system sleep
-while the process runs. It does not normally prevent a MacBook from sleeping
-when its lid is closed.
+This helper is optional. It checks for `tunnel-client` and then runs the direct
+macOS command:
+
+```bash
+caffeinate -i tunnel-client run --profile tabpaw
+```
+
+`caffeinate -i` prevents idle system sleep while the process runs. It does not
+normally prevent a MacBook from sleeping when its lid is closed.
 
 The default local administration page is:
 
