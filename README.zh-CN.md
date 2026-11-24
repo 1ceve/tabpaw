@@ -152,17 +152,9 @@ bash scripts/start.sh
 真正需要持续运行的只有 Mac 上的 `tunnel-client`。Chrome 无需提前打开，
 第一次调用浏览器工具时，Chrome DevTools MCP 会自动把专用 Chrome 拉起来。
 
-## 发布前检查
-
-```bash
-bash -n scripts/*.sh
-bash scripts/check-secrets.sh
-```
-
-确认仓库中没有真实 API key、tunnel ID、Cookie、浏览器档案、个人绝对路径和账号资料。
-
 更完整的步骤见 [macOS 配置说明](docs/setup-macos.md)，故障处理见
-[排错手册](docs/troubleshooting.md)。
+[排错手册](docs/troubleshooting.md)。准备修改项目本身时，请看
+[贡献指南](CONTRIBUTING.md)。
 
 ## 安全提醒
 

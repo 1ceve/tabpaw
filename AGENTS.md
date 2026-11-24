@@ -8,4 +8,6 @@
 - Keep helper scripts safe under `set -euo pipefail`.
 - Do not delete, overwrite, or reset a user's existing tunnel profile.
 - Run `bash -n scripts/*.sh` and `bash scripts/check-secrets.sh` before committing.
+- When Codex or ChatGPT materially contributes to a commit, append exactly:
+  `Co-authored-by: Codex <199175422+chatgpt-codex-connector[bot]@users.noreply.github.com>`
 - Keep TabPaw independent; do not imply OpenAI or Google endorsement.
