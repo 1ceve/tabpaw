@@ -107,6 +107,10 @@ Readiness endpoints include `/healthz` and `/readyz` on the same address.
 Only one active `tunnel-client` should use a given tunnel ID with a supervised
 stdio MCP command. Stop the old process before starting a replacement.
 
+Chrome does not need to be open before TabPaw is used. Keep `tunnel-client`
+running; Chrome DevTools MCP launches the dedicated Chrome automatically when
+the first browser tool requires it.
+
 ## 6. Add the private plugin in ChatGPT
 
 While the local runtime is healthy:

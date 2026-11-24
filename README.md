@@ -89,6 +89,10 @@ Availability depends on your OpenAI plan, workspace permissions, and rollout.
    connection and select the same tunnel. Keep the tunnel running while the
    plugin is discovered and used.
 
+Only `tunnel-client` needs to stay running. You do not need to open Chrome in
+advance; Chrome DevTools MCP launches the dedicated Chrome automatically when
+a browser tool is first used.
+
 For the complete walkthrough, see [macOS setup](docs/setup-macos.md).
 
 ## Security model

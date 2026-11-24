@@ -130,7 +130,8 @@ bash scripts/start.sh
 ```
 
 保持 Mac 开机、联网且没有整机睡眠。ChatGPT 桌面端无需为了 tunnel 常驻；
-真正需要持续运行的是 Mac 上的 `tunnel-client` 及其 Chrome。
+真正需要持续运行的只有 Mac 上的 `tunnel-client`。Chrome 无需提前打开，
+第一次调用浏览器工具时，Chrome DevTools MCP 会自动把专用 Chrome 拉起来。
 
 ## 发布前检查
 
