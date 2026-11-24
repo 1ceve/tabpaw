@@ -13,6 +13,9 @@ runs, and lets you watch or take over while ChatGPT works. When the same private
 plugin is enabled in Chat and Work, both surfaces can use the browser with their
 available conversation context and memories.
 
+It is especially useful for browsing or operating signed-in sites such as X and
+Xiaohongshu.
+
 TabPaw does not fork or redistribute either upstream project. It provides safe
 example configuration, helper scripts, and an end-to-end setup guide around:
 
